@@ -1,0 +1,11 @@
+<html>
+    <title>helloworldmvc</title>
+    <body>
+    #if(${helloWorld})
+    name:    ${helloWorld.name} <p />
+    message: ${helloWorld.message}
+    #else
+    sorry, can't find helloworld infomation!
+    #end
+    </body>
+</html>
