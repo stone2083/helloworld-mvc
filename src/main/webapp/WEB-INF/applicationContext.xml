@@ -22,9 +22,9 @@
         <property name="mapperLocations" value="classpath:sql/helloworld.xml" />
     </bean>
 
-    <bean id="helloWorldDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="mapperInterface" value="org.jellylab.helloworld.dao.HelloWorldDao" />
-        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
-    </bean>  
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="org.jellylab.helloworld.dao" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+    </bean>
 
 </beans>
